@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient">
+
+    <RelativeLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/getAll"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/refresh"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/btn_select"
+            android:text="Connect"
+            android:textSize="0dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/bt_connect"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.31"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4.11"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:src="@drawable/trapezoid"
+                android:layout_width="300dp"
+                android:layout_height="80dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="218dp"
+                android:id="@+id/imageView" />
+
+            <ImageView
+                android:src="@drawable/trapezoid2"
+                android:layout_width="300dp"
+                android:layout_height="80dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="139dp"
+                android:id="@+id/imageView2" />
+
+            <ImageView
+                android:src="@drawable/trapezoid3"
+                android:layout_width="300dp"
+                android:layout_height="80dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="60dp"
+                android:id="@+id/imageView3" />
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="140dp"
+                android:id="@+id/temperature"
+                android:textSize="90dp"
+                android:textColor="#FFF"
+                android:gravity="center"
+                android:layout_marginBottom="11dp"
+                android:layout_above="@+id/imageView"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="29dp"
+                android:text="72.3"/>
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:id="@+id/humidity"
+                android:textSize="50dp"
+                android:textColor="#FFF"
+                android:gravity="start"
+                android:layout_marginTop="11dp"
+                android:layout_alignTop="@+id/imageView"
+                android:layout_alignStart="@+id/temperature"
+                android:text="23"/>
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:id="@+id/pressure"
+                android:textSize="50dp"
+                android:textColor="#FFF"
+                android:gravity="start|center"
+                android:layout_marginTop="11dp"
+                android:layout_alignTop="@+id/imageView2"
+                android:layout_alignStart="@+id/humidity"
+                android:text="100"/>
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:id="@+id/battery"
+                android:textSize="50dp"
+                android:textColor="#FFF"
+                android:gravity="start"
+                android:layout_marginTop="11dp"
+                android:layout_alignTop="@+id/imageView3"
+                android:layout_alignStart="@+id/pressure"
+                android:text="5.01"/>
+
+            <ImageView
+                android:src="@drawable/thermometer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView4"
+                android:layout_marginBottom="33dp"
+                android:layout_alignBottom="@+id/temperature"
+                android:layout_alignParentEnd="true" />
+
+            <ImageView
+                android:src="@drawable/humidity"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:id="@+id/imageView5"
+                android:layout_alignBottom="@+id/humidity"
+                android:layout_toStartOf="@+id/humidity" />
+            <ImageView
+                android:src="@drawable/pressure"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:id="@+id/imageView6"
+                android:layout_alignBottom="@+id/pressure"
+                android:layout_toStartOf="@+id/pressure" />
+            <ImageView
+                android:src="@drawable/battery"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:id="@+id/imageView7"
+                android:layout_alignBottom="@+id/battery"
+                android:layout_toStartOf="@+id/battery" />
+
+            <ImageView
+                android:src="@drawable/temperature_units"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/imageView8"
+                android:layout_above="@+id/imageView4"
+                android:layout_alignStart="@+id/imageView4" />
+
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/humidityUnits"
+                android:textSize="30dp"
+                android:textColor="#FFF"
+                android:gravity="bottom"
+                android:text="%"
+                android:layout_alignBottom="@+id/humidity"
+                android:layout_toEndOf="@+id/humidity" />
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:id="@+id/batteryUnits"
+                android:textSize="30dp"
+                android:textColor="#FFF"
+                android:gravity="bottom"
+                android:text="V"
+                android:layout_alignTop="@+id/battery"
+                android:layout_toEndOf="@+id/battery" />
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:id="@+id/pressureUnits"
+                android:textSize="30dp"
+                android:textColor="#FFF"
+                android:gravity="bottom"
+                android:text="kPa"
+                android:layout_alignTop="@+id/pressure"
+                android:layout_toEndOf="@+id/pressure" />
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:id="@+id/light"
+                android:gravity="center"
+                android:src="@drawable/light_sunny"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@+id/temperature" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
